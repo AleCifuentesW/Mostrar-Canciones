@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Canciones</title>
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 </head>
 
@@ -37,7 +37,7 @@
                     <td>${cancion.genero}</td>
                     <td>${cancion.idioma}</td>
                     <td>
-                        <a class="link_detalle" href="/canciones/detalle/${cancion.id}">Detalle</a>
+                        <a class="link_detalle" href="${pageContext.request.contextPath}/canciones/detalle/${cancion.id}">Detalle</a>
 
                     </td>
                 </tr>
@@ -47,7 +47,7 @@
     </table>
 
     <p style="text-align:right; margin-bottom: 10px;">
-    <a class="btn" href="/canciones/formulario/agregar">Agregar nueva canción</a>
+    <a class="btn" href="${pageContext.request.contextPath}/canciones/formulario/agregar">Agregar nueva canción</a>
 
     </p>
 </div>

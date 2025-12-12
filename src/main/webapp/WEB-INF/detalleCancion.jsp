@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Detalle cancion</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 
 <body>
@@ -23,8 +23,17 @@
         <p>Idioma: ${cancion.idioma}</p>
         <p>Creada: ${cancion.fechaCreacion}</p>
         <p>Actualizada: ${cancion.fechaActualizacion}</p>
-        <a href="/canciones">Volver a la lista de canciones</a>
+        
     </div>
+    <%--agrega un botón para actualizar la canción.--%>
+    <p style="margin-top: 20px;">
+        <a class="btn" href="${pageContext.request.contextPath}/canciones/formulario/editar/${cancion.id}">Editar la canción</a>
+    </p>
+
+    <p style="margin-top:15px;">
+        <a href="${pageContext.request.contextPath}/canciones">Volver a lista de canciones</a>
+    </p>
+
 
     
 </div>

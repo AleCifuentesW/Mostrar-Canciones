@@ -36,6 +36,7 @@ public class Cancion{
 
     @Size(min = 3, message = "El álbum debe tener al menos 3 caracteres.")
     private String album;
+    
 
     @Size(min = 3, message = "El género debe tener al menos 3 caracteres.")
     private String genero;
