@@ -26,7 +26,10 @@ public class ServicioCanciones{
 	public Cancion actualizaCancion(Cancion cancionActualizada){
 		return repoCanciones.save(cancionActualizada);
 	}
-
+	//eliminar canciones
+	public void eliminaCancion(Long idCancion) {
+		repoCanciones.deleteById(idCancion);
+	}
 
 	
 }

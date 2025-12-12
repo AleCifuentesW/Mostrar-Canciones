@@ -13,8 +13,9 @@ import org.springframework.validation.BindingResult;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-//nuevo:
 import org.springframework.web.bind.annotation.PutMapping;
+//nuevo:
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 
 @Controller
@@ -85,6 +86,13 @@ public class ControladorCanciones{
         // Volvemos a la lista
         return "redirect:/canciones";
     }
+    //procesarEliminarCancion():
+    @DeleteMapping("/canciones/eliminar/{idCancion}")
+    public String procesarEliminarCancion(@PathVariable("idCancion") Long idCancion){
+        servicioCanciones.eliminaCancion(idCancion);
+        return "redirect:/canciones";
+    }
+
 
 
 }

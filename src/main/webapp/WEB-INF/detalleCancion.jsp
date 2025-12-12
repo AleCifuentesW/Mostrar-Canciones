@@ -34,6 +34,15 @@
         <a href="${pageContext.request.contextPath}/canciones">Volver a lista de canciones</a>
     </p>
 
+    <form action="${pageContext.request.contextPath}/canciones/eliminar/${cancion.id}"
+        method="POST"
+        style="margin-top:15px;"
+        onsubmit="return confirm('¿Quieres eliminar esta canción?');">
+
+        <input type="hidden" name="_method" value="DELETE"/>
+        <button type="submit" class="btn">Eliminar canción</button>
+    </form>
+
 
     
 </div>
